@@ -7,11 +7,14 @@ namespace Tests
     [TestClass]
     public class StudentTests
     {
+        private const int minStudentNumber = 10000;
+        private const int maxStudentNumber = 99999;
+
         [TestMethod]
         [ExpectedException(typeof(NullReferenceException))]
         public void NamePropertyShouldThrowNullRefferenceExceptionIfEmtyOrNullStringIsPassed()
         {
-            var student = new Student("Pesho", 10000);
+            var student = new Student("Johny", minStudentNumber);
 
             student.Name = "";
         }
@@ -19,8 +22,8 @@ namespace Tests
         [TestMethod]
         public void NamePropertyShouldReturnExpectedStringIfValidOneIsPassed()
         {
-            var expectedName = "Pesho";
-            var student = new Student(expectedName, 10000);
+            var expectedName = "Johny";
+            var student = new Student(expectedName, minStudentNumber);
             var actualName = student.Name;
             Assert.AreEqual(expectedName, actualName);
         }
@@ -30,24 +33,22 @@ namespace Tests
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void NumberPropertyShouldThrowArgumentOutOfRangeExceptionIfLowerNumberThanMinAllowedIsPassed()
         {
-            var min = 10000;
-            var student = new Student("Pesho", min);
+            var student = new Student("Pesho", minStudentNumber);
 
-            student.Number = min - 1;
+            student.Number = minStudentNumber - 1;
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void NumberPropertyShouldThrowArgumentOutOfRangeExceptionIfGreaterNumberThanMaxAllowedIsPassed()
         {
-            var max = 99999;
-            var student = new Student("Pesho", max);
+            var student = new Student("Pesho", maxStudentNumber);
 
-            student.Number = max + 1;
+            student.Number = maxStudentNumber + 1;
         }
 
         [TestMethod]
-        public void NumberPropertyShouldReturnExpextedNumberIfValidNumberIsPassed()
+        public void NumberPropertyShouldReturnExpectedNumberIfValidNumberIsPassed()
         {
             var expextedNumber = 10001;
             var student = new Student("Pesho", expextedNumber);

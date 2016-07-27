@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Santase.Logic", "Santase.Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUinitTestDeck", "NUinitTestDeck\NUinitTestDeck.csproj", "{67E8D89F-70CA-4D80-A988-A0F0EE6FF4CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestPlayerActionValidatorIsValid", "NUnitTestPlayerActionValidatorIsValid\NUnitTestPlayerActionValidatorIsValid.csproj", "{51FD581F-B67E-483D-A798-233036846A53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{67E8D89F-70CA-4D80-A988-A0F0EE6FF4CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67E8D89F-70CA-4D80-A988-A0F0EE6FF4CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67E8D89F-70CA-4D80-A988-A0F0EE6FF4CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51FD581F-B67E-483D-A798-233036846A53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51FD581F-B67E-483D-A798-233036846A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51FD581F-B67E-483D-A798-233036846A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51FD581F-B67E-483D-A798-233036846A53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
